@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GameFunction from './GameFunction';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
     <button id='paper' class='ui button'>Paper</button>
     <button id='scissors' class='ui button'>Scissors</button>
     </div>
+    <GameFunction></GameFunction>
     </>
   )}
 }
