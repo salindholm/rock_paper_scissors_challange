@@ -24,10 +24,10 @@ class GameFunction extends Component {
   };
 
   playGame = () => {
-    let computerChoise = game[Math.floor(Math.random() * game.length)];
-    this.setState({ computer: computerChoise });
-    let userChoise = this.state.user;
-    let result = this.decideResult(userChoise, computerChoise);
+    let computerChoice = game[Math.floor(Math.random() * game.length)];
+    this.setState({ computer: computerChoice });
+    let userChoice = this.state.user;
+    let result = this.decideResult(userChoice, computerChoice);
     if (result !== "Tie") {
       this.setScore(result);
     } else {
