@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
+const game = ["rock", "paper", "scissor"]
+
 class GameFunction extends Component {
   state = {
     user: "",
     computer: ""
   };
+
 
   decideResult = (user, computer) => {
     if (user === computer) {
@@ -19,9 +22,22 @@ class GameFunction extends Component {
       return "Computer win!";
     }
   };
+
+  playGame = () => {
+    let computerChoise = game[Math.floor(Math.random() * game.length)];
+    this.setState({ computer: computerChoise });
+    let userChoise = this.state.user;
+    let result = this.decideResult(userChoise, computerChoise);
+    if (result !== "Tie") {
+      this.setScore(result);
+    } else {
+      this.setState({ result: result });
+    }
+  };
   
 
   render() {
+    const { user, computer } = this.state;
     return (
       <div>
         
