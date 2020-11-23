@@ -1,6 +1,7 @@
 import React from "react";
 
 function App() {
+  const [setGame] = useState({
   userSelection: "",
   computerSelection: "",
 });
@@ -22,6 +23,12 @@ if (user === computer) {
   message: (game.message = "You lost!"),
   });
 }
+
+  setGame({
+  userSelection: user,
+  computerSelection: computer,
+ });
+
 
 
   render() {
