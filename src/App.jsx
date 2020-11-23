@@ -55,7 +55,10 @@ if (user === computer) {
       <Button name="Paper" onClick={ playGame } img={paper} />
       <Button name="Scissors" onClick={ playGame } img={scissors}/>
     </div>
-    <GameFunction></GameFunction>
+      <h1>{game.userSelection === "" ? "Pick one!" : `Your choice: ${game.userSelection}`}</h1>
+        <img className="pc-selection-img" src={ game.computerSelection === "Rock" ? rock : game.computerSelection === "Paper" ? paper : scissors } alt="img"/>
+        <h1>Computer chose: {game.computerSelection}</h1>
+      <h1 className="message">{game.message}</h1>
     </>
   )}
 }
