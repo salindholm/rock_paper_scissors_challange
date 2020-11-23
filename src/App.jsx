@@ -2,6 +2,26 @@ import React, { Component } from "react";
 import GameFunction from './GameFunction';
 
 class App extends Component {
+
+if (user === computer) {
+  setGame({
+  message: (game.message = "It's a tie!"),
+  });
+} else if (
+  (user === "Rock" && computer === "Scissors") ||
+  (user === "Paper" && computer === "Rock") ||
+  (user === "Scissors" && computer === "Paper")
+) {
+  setGame({
+  message: (game.message = "You won!"),
+  });
+} else {
+  setGame({
+  message: (game.message = "You lost!"),
+  });
+}
+
+
   render() {
     return (
       <>
