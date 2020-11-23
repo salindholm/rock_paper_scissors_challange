@@ -1,7 +1,9 @@
-import React, { Component } from "react";
-import GameFunction from './GameFunction';
+import React from "react";
 
-class App extends Component {
+function App() {
+  userSelection: "",
+  computerSelection: "",
+});
 
 if (user === computer) {
   setGame({
