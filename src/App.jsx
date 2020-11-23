@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import rock from "./assets/rock.png";
 import paper from "./assets/paper.png";
 import scissors from "./assets/scissors.png";
@@ -13,6 +13,8 @@ const Button = (props) => {
 
 function App() {
   const [game, setGame] = useState({
+  name: "Player",
+  computer: "",
   userSelection: "",
   computerSelection: "",
   message: ""
@@ -50,14 +52,14 @@ setGame({
  });
 };
 
-    return (
-      <>
-    <h1>Rock Paper Scissors Game</h1>
-    <div class='ui buttons'>
-      <Button name="Rock" onClick={ playGame } img={rock} />
-      <Button name="Paper" onClick={ playGame } img={paper} />
-      <Button name="Scissors" onClick={ playGame } img={scissors}/>
-    </div>
+  return (
+    <>
+      <h1>Rock Paper Scissors Game</h1>
+      <div class='ui buttons'>
+        <Button name="Rock" onClick={ playGame } img={rock} />
+        <Button name="Paper" onClick={ playGame } img={paper} />
+        <Button name="Scissors" onClick={ playGame } img={scissors}/>
+      </div>
       <h1>{game.userSelection === "" ? "Pick one!" : `Your choice: ${game.userSelection}`}</h1>
         <h1>Computer chose: {game.computerSelection}</h1>
       <h1 className="message">{game.message}</h1>
