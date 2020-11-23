@@ -1,4 +1,15 @@
 import React from "react";
+import rock from "./assets/rock.png";
+import paper from "./assets/paper.png";
+import scissors from "./assets/scissors.png";
+
+const Button = (props) => {
+  return (
+    <div value={props.name} onClick={props.onClick}>
+      <img class="user-selection-img" src={props.img} alt="img" />
+    </div>
+  );
+};
 
 function App() {
   const [setGame] = useState({
@@ -36,9 +47,9 @@ if (user === computer) {
       <>
     <h1>Rock Paper Scissors Game</h1>
     <div class='ui buttons'>
-    <button id='rock' class='ui button'>Rock</button>
-    <button id='paper' class='ui button'>Paper</button>
-    <button id='scissors' class='ui button'>Scissors</button>
+      <Button name="Rock" onClick={ playGame } img={rock} />
+      <Button name="Paper" onClick={ playGame } img={paper} />
+      <Button name="Scissors" onClick={ playGame } img={scissors}/>
     </div>
     <GameFunction></GameFunction>
     </>
