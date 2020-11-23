@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import rock from "./assets/rock.png";
 import paper from "./assets/paper.png";
 import scissors from "./assets/scissors.png";
@@ -17,54 +17,56 @@ function App() {
   computer: "",
   userSelection: "",
   computerSelection: "",
-  message: ""
+  message: "",
 });
 
-const playGame = (e) => {
-  const user = e.target.parentNode.getAttribute("value")
-  const computer = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
-
-  if (user === computer) {
-    setGame({
-    ...game,
-    message: (game.message = "It's a tie!"),
-    });
-  } else if (
-    (user === "Rock" && computer === "Scissors") ||
-    (user === "Paper" && computer === "Rock") ||
-    (user === "Scissors" && computer === "Paper")
-  ) {
-    setGame({
-    ...game,
-    message: (game.message = "You won!"),
-    });
-  } else {
-    setGame({
-    ...game,
-    message: (game.message = "You lost!"),
-  });
-}
+  const playGame = (e) => {
+    const user = e.target.parentNode.getAttribute("value")
+    const computer = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
     
-setGame({
-  ...game,
-  userSelection: user,
-  computerSelection: computer,
- });
+    if (user === computer) {
+      setGame({
+      ...game,
+      message: (game.message = "It's a tie!"),
+      });
+    } else if (
+      (user === "Rock" && computer === "Scissors") ||
+      (user === "Paper" && computer === "Rock") ||
+      (user === "Scissors" && computer === "Paper")
+    ) {
+      setGame({
+      ...game,
+      message: (game.message = "You won!"),
+      });
+    } else {
+      setGame({
+      ...game,
+      message: (game.message = "You lost!"),
+    });
+  }
+      
+  setGame({
+    ...game,
+    userSelection: user,
+    computerSelection: computer,
+   });
 };
 
   return (
-    <>
-      <h1>Rock Paper Scissors Game</h1>
+  <>
+    <h1>Rock Paper Scissors Game</h1>
       <div class='ui buttons'>
-        <Button name="Rock" onClick={ playGame } img={rock} />
-        <Button name="Paper" onClick={ playGame } img={paper} />
-        <Button name="Scissors" onClick={ playGame } img={scissors}/>
-      </div>
-      <h1>{game.userSelection === "" ? "Pick one!" : `Your choice: ${game.userSelection}`}</h1>
-        <h1>Computer chose: {game.computerSelection}</h1>
+      <Button name="Rock" onClick={ playGame } img={rock} />
+      <Button name="Paper" onClick={ playGame } img={paper} />
+      <Button name="Scissors" onClick={ playGame } img={scissors}/>
+    </div>
+    <h1>{game.userSelection === "" ? "Pick one!" : `Your choice: ${game.userSelection}`}</h1>
+     <img className="pc-selection-img" src={ game.computerSelection === "Rock" ? rock : game.computerSelection === "Paper" ? paper : scissors } alt="img"/>
+      <h1>Computer chose: {game.computerSelection}</h1>
       <h1 className="message">{game.message}</h1>
     </>
-  )
+  );
 }
+
 
 export default App;
