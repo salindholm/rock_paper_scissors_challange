@@ -17,6 +17,10 @@ function App() {
   computerSelection: "",
 });
 
+const playGame = (e) => {
+  const user = e.target.parentNode.getAttribute("value")
+  const computer = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
+
 if (user === computer) {
   setGame({
   message: (game.message = "It's a tie!"),
