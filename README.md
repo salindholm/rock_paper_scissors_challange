@@ -5,7 +5,7 @@ This is a Rock Paper Scissor Game application. The application is built to enter
 
 ## Links:
 Deployment link: [The Rock Paper Scissor Game](https://salindholm-rps-challange.netlify.app/) \
-Github API: [GitHub Repository](https://github.com/salindholm/rock_paper_scissors_challange.git)
+Github Repo: [GitHub Repository](https://github.com/salindholm/rock_paper_scissors_challange.git)
 
 ## User Stories:
 ```
@@ -19,13 +19,13 @@ I want to be able to play a rock paper scissors game
 ## Dependencies:
 To run locally you will need to install the packages in the package.json by using:
 ```
-yarn
+yarn install
 ```
 I've used the following packages:
 - Cypress
 - Semantic-ui-react
 - React
-- React Router Dom
+- React-router-dom
 
 ## Acknowledgements:
 - Learning materials from Craft Academy
