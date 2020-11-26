@@ -1,17 +1,22 @@
-import React, { Component } from "react";
+import React from 'react';
+import Home from './Components/Game';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Rules from './Components/Rules';
+import { Switch, Route } from 'react-router-dom';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <>
-    <h1>Rock Paper Scissors Game</h1>
-    <div class='ui buttons'>
-    <button id='rock' class='ui button'>Rock</button>
-    <button id='paper' class='ui button'>Paper</button>
-    <button id='scissors' class='ui button'>Scissors</button>
-    </div>
-    </>
-  )}
-}
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/rules" component={Rules}></Route>
+          <Home />
+        </Switch>
+        <Footer />
+      </>
+    );
+  };
 
 export default App;
