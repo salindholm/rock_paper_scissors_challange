@@ -1,8 +1,8 @@
 ## The Cooper Challenge
-This is the Client of the full stack application we have created. Our application is built to get and save the users cooper results.
+This is a Rock Paper Scissor Game application. The application is built to entertain people.
 
 ## Links:
-Deployment link: [The Rock Paper Scissor Game](whssl-cooper-challenge.netlify.app) \
+Deployment link: [The Rock Paper Scissor Game](https://salindholm-rps-challange.netlify.app/) \
 Github API: [GitHub Repository](https://github.com/salindholm/rock_paper_scissors_challange.git)
 
 ## User Stories:
@@ -23,13 +23,16 @@ I've used the following packages:
 - Cypress
 - Semantic-ui-react
 - React
+- React Router Dom
 
 ## Acknowledgements:
 - Learning materials from Craft Academy
 - [Semantic UI Documentation](https://react.semantic-ui.com/)
+- [React Documentation](https://reactjs.org/)
 
 ## Improvement plans
-- 
+- To create further tests for playing functionality.
+- To app option to play again another user.
 
 ## License
 This app is open source software licensed as MIT.
