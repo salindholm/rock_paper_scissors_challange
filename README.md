@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/25ca29f3-8af8-4a34-8461-23b27275053f/deploy-status)](https://app.netlify.com/sites/salindholm-rps-challange/deploys)
+
 ## The Cooper Challenge
 This is a Rock Paper Scissor Game application. The application is built to entertain people.
 
