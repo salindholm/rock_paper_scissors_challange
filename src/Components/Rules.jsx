@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, List } from "semantic-ui-react";
+import { Container, List, Icon } from "semantic-ui-react";
 
 const Rules = () => {
   return (
@@ -9,10 +9,10 @@ const Rules = () => {
       <p>Although the game has a lot of complexity to it, the rules to play it are pretty simple.
 The game is played where players deliver hand signals that will represent the elements of the game; rock, paper and scissors. The outcome of the game is determined by 3 simple rules:</p>
     </Container>
-    <List bulleted id="list">
-    <List.Item>Rock wins against scissors</List.Item>
-    <List.Item>Scissors win against paper</List.Item>
-    <List.Item>Paper wins against rock</List.Item>
+    <List id="list">
+    <List.Item><Icon name='hand rock outline' size='small'/> Rock wins against scissors</List.Item>
+    <List.Item><Icon name='hand scissors outline' size='small'/> Scissors win against paper</List.Item>
+    <List.Item><Icon name='hand paper outline' size='small'/> Paper wins against rock</List.Item>
     </List>
     </>
   );
