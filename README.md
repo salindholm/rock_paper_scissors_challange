@@ -15,7 +15,7 @@ I want to be able to play a rock paper scissors game
 - Cypress for acceptance test
 
 ## Dependencies:
-To run locally you will need to install the packages in the package.json by using:\
+To run locally you will need to install the packages in the package.json by using:
 ```
 yarn
 ```

@@ -13,15 +13,13 @@ const Button = (props) => {
 
 function App() {
   const [game, setGame] = useState({
-  name: "Player",
-  computer: "",
   userSelection: "",
   computerSelection: "",
   message: "",
 });
 
-  const playGame = (e) => {
-    const user = e.target.parentNode.getAttribute("value")
+  const playGame = (event) => {
+    const user = event.target.parentNode.getAttribute("value")
     const computer = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
     
     if (user === computer) {
