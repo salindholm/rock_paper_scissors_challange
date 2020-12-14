@@ -3,23 +3,30 @@ describe("User can play game against the computer", () => {
 		cy.visit("/");
 	});
 
-	it("user choose Rock", () => {
-		cy.get("button#rock").should("contain", "Rock");
+	it("by choosing Rock", () => {
+		cy.get('[data-cy="Rock"]').click();
+		cy.get('[data-cy="user-selection"]').should("contain", "Your choice: Rock");
+		cy.get('[data-cy="computer-selection"]').should("exist");
+		cy.get('[data-cy="result-message"]').should("exist");
 	});
 
-	it("user choose Paper", () => {
-		cy.get("button#paper").should("contain", "Paper");
+	it("by choosing Paper", () => {
+		cy.get('[data-cy="Paper"]').click();
+		cy.get('[data-cy="user-selection"]').should(
+			"contain",
+			"Your choice: Paper"
+		);
+		cy.get('[data-cy="computer-selection"]').should("exist");
+		cy.get('[data-cy="result-message"]').should("exist");
 	});
 
-	it("user choose Scissors", () => {
-		cy.get("button#scissors").should("contain", "Scissors");
-	});
-
-	it("user can see computers choice", () => {
-		cy.get("computer-play").should("contain", "Computer choise");
-	});
-
-	it("user can see the results", () => {
-		cy.get("#results").should("contain", "You win!");
+	it("by choosing Scissors", () => {
+		cy.get('[data-cy="Scissors"]').click();
+		cy.get('[data-cy="user-selection"]').should(
+			"contain",
+			"Your choice: Scissors"
+		);
+		cy.get('[data-cy="computer-selection"]').should("exist");
+		cy.get('[data-cy="result-message"]').should("exist");
 	});
 });

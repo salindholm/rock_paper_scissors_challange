@@ -7,7 +7,12 @@ import { Container } from "semantic-ui-react";
 const Button = (props) => {
 	return (
 		<div value={props.name} onClick={props.onClick}>
-			<img class="user-selection-img" src={props.img} alt="img" />
+			<img
+				class="user-selection-img"
+				data-cy={props.name}
+				src={props.img}
+				alt="img"
+			/>
 		</div>
 	);
 };
@@ -57,15 +62,22 @@ function GamePlay() {
 		<Container id="container">
 			<h1>Rock Paper Scissors Game</h1>
 			<div class="ui buttons">
-				<Button name="Rock" onClick={playGame} img={rock} />
-				<Button name="Paper" onClick={playGame} img={paper} />
-				<Button name="Scissors" onClick={playGame} img={scissors} />
+				<Button data-cy="rock" name="Rock" onClick={playGame} img={rock} />
+				<Button data-cy="paper" name="Paper" onClick={playGame} img={paper} />
+				<Button
+					data-cy="scissors"
+					name="Scissors"
+					onClick={playGame}
+					img={scissors}
+				/>
 			</div>
-			<h1>
-				{game.userSelection === ""
-					? "Pick one!"
-					: `Your choice: ${game.userSelection}`}
-			</h1>
+			<div data-cy="user-selection">
+				<h1>
+					{game.userSelection === ""
+						? "Pick one!"
+						: `Your choice: ${game.userSelection}`}
+				</h1>
+			</div>
 			<img
 				className="pc-selection-img"
 				src={
@@ -77,8 +89,12 @@ function GamePlay() {
 				}
 				alt="img"
 			/>
-			<h1>Computer chose: {game.computerSelection}</h1>
-			<h1 className="message">{game.message}</h1>
+			<div data-cy="computer-selection">
+				<h1>Computer chose: {game.computerSelection}</h1>
+			</div>
+			<div data-cy="result-message">
+				<h1 className="message">{game.message}</h1>
+			</div>
 		</Container>
 	);
 }
