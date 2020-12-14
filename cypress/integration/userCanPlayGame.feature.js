@@ -7,7 +7,7 @@ describe("User can play game against the computer", () => {
 		cy.get('[data-cy="Rock"]').click();
 		cy.get('[data-cy="user-selection"]').should("contain", "Your choice: Rock");
 		cy.get('[data-cy="computer-selection"]').should("exist");
-		cy.get('[data-cy="result-message"]').should("exist");
+		cy.get('[data-cy="result-message"]').should("not.be.empty");
 	});
 
 	it("by choosing Paper", () => {
@@ -17,7 +17,7 @@ describe("User can play game against the computer", () => {
 			"Your choice: Paper"
 		);
 		cy.get('[data-cy="computer-selection"]').should("exist");
-		cy.get('[data-cy="result-message"]').should("exist");
+		cy.get('[data-cy="result-message"]').should("not.be.empty");
 	});
 
 	it("by choosing Scissors", () => {
@@ -27,6 +27,6 @@ describe("User can play game against the computer", () => {
 			"Your choice: Scissors"
 		);
 		cy.get('[data-cy="computer-selection"]').should("exist");
-		cy.get('[data-cy="result-message"]').should("exist");
+		cy.get('[data-cy="result-message"]').should("not.be.empty");
 	});
 });
