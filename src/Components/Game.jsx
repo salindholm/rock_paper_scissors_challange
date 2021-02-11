@@ -3,19 +3,7 @@ import rock from "./assets/Images/rock.png";
 import paper from "./assets/Images/paper.png";
 import scissors from "./assets/Images/scissors.png";
 import { Container } from "semantic-ui-react";
-
-const Button = (props) => {
-	return (
-		<div value={props.name} onClick={props.onClick}>
-			<img
-				class="user-selection-img"
-				data-cy={props.name}
-				src={props.img}
-				alt="img"
-			/>
-		</div>
-	);
-};
+import Button from "./Button";
 
 function GamePlay() {
 	const [game, setGame] = useState({
